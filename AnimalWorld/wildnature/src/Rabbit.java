@@ -1,6 +1,6 @@
 public class Rabbit extends Animal {
-    public Rabbit(String name , String ears , String color , String eyes , int legs , int wings , String meal , int weight){
-        super(name,ears,color,eyes,legs,wings,meal,weight);
+    public Rabbit(String name , String ears , String color , String eyes , int legs , int wings , String meal , int weight, int speed){
+        super(name,ears,color,eyes,legs,wings,meal,weight,speed);
     }
 
     public void Continents(){
@@ -26,5 +26,16 @@ public class Rabbit extends Animal {
     public String getSkin() {
         return skin;
     }
+
+
+    public String inidcator_Huse(float x) {
+        if (x>0) {
+            return name + "Y";
+        }
+        else {
+            return "N";
+        }
+    }
+
 
 }

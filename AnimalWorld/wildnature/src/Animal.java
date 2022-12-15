@@ -8,14 +8,16 @@ public abstract class Animal {
     int legs;
     int wings;
     String meal;
-    String type = setType();
+    public String type = setType();
 
 
     public String name;
-    public String skin = skinType();
+    String skin = skinType();
+
+    int speed;
 
 
-    public Animal(String name , String ears , String color , String eyes , int legs , int wings , String meal , float weight){
+    public Animal(String name , String ears , String color , String eyes , int legs , int wings , String meal , float weight,int speed){
         this.name = name;
         this.ears = ears;
         this.color = color;
@@ -24,6 +26,7 @@ public abstract class Animal {
         this.wings = wings;
         this.meal = meal;
         this.weight = weight;
+        this.speed = speed;
     }
 
     public String setType(){
@@ -38,9 +41,9 @@ public abstract class Animal {
         System.out.println(type);
     }
 
-    public int indicator_Hungriness(){
+    public float indicator_Hungriness(){
         Random rand = new Random();
-        return rand.nextInt();
+        return rand.nextFloat();
     }
 
     public String getPlace(){
@@ -58,6 +61,7 @@ public abstract class Animal {
 
     public abstract String getSkin();
 
+    public abstract String inidcator_Huse(float x);
 
 
     public abstract void diet();
